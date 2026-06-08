@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanisha Jalady | Backend Developer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Vanisha Jalady
+    </div>
+   
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#learning">Learning</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div class="glass-card">
+
+        <div class="badge">
+            Aspiring Backend Engineer
+        </div>
+
+        <h1>
+            Hi,I'm Vanisha Jalady
+        </h1>
+
+        <h2>
+            <span id="typing"></span>
+        </h2>
+        <p style="margin-top:15px;color:#94a3b8;">
+B.E Computer Science and Business Systems Student | Aspiring Backend Engineer | Open to Opportunities
+</p>
+        <p>
+            Passionate about building scalable backend systems,
+            high-performance APIs, and database-driven applications
+            using Python, FastAPI, Flask, and PostgreSQL.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn-primary">
+                View Projects
+            </a>
+
+            <a href="https://github.com/vanishajalady"
+               target="_blank"
+               class="btn-secondary">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section reveal" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am an aspiring Backend Developer with a strong interest in
+        building scalable web applications, REST APIs, and database-driven
+        systems. My primary focus is on backend engineering using Python,
+        FastAPI, Flask, and PostgreSQL.
+
+        <br><br>
+
+        I enjoy designing efficient solutions, optimizing application
+        performance, and solving real-world problems through software.
+        Through personal and academic projects, I have gained experience
+        working with API development, database management, version control,
+        and full-stack application integration.
+
+        <br><br>
+
+        Currently, I am expanding my knowledge in Docker, Linux,
+        AWS fundamentals, and System Design to strengthen my backend
+        development expertise and prepare for software engineering roles.
+    </p>
+
+</section>
+
+<section class="section reveal" id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>Flask</span>
+        <span>PostgreSQL</span>
+        <span>SQL</span>
+        <span>REST APIs</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Linux</span>
+        <span>Docker</span>
+
+    </div>
+
+</section>
+
+<section class="section reveal" id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        {% for project in projects %}
+
+        <div class="project-card">
+
+            <h3>{{ project[1] }}</h3>
+
+            <p>
+                {{ project[2] }}
+            </p>
+
+            <small>
+                {{ project[3] }}
+            </small>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<section class="section reveal" id="contact">
+
+    <h2>Contact</h2>
+
+    <p>📧 vanishajalady3@gmail.com</p>
+
+    <br>
+
+    <a href="https://github.com/vanishajalady"
+       target="_blank">
+       GitHub
+    </a>
+
+    <br><br>
+
+    <a href="https://www.linkedin.com/in/vanisha-jalady-143a80317/"
+       target="_blank">
+       LinkedIn
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Vanisha Jalady
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
